@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.my-5px {
+  margin: 5px 0;
+}
+.text-12px {
+  font-size: 12px;
+}
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.gap-20px {
+  gap: 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse; /* tr bottom border wouldn't show if not collapse */
+  overflow: hidden;
+  border-radius: 10px;
+}
+th {
+  background: rgb(161, 159, 159);
+  color: white;
+}
+td,
+th {
+  text-align: left;
+  min-width: 50px;
+  padding: 10px;
+  font-size: 12px;
+}
+.border-bottom {
+  border-bottom: 1px solid rgb(207, 207, 207) !important;
+}
