@@ -7,11 +7,18 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+header, .signature-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .my-5px {
   margin: 5px 0;
 }
 .text-12px {
-  font-size: 12px;
+  font-size: 16px;
 }
 .flex {
   display: flex;
@@ -21,6 +28,18 @@ body {
 }
 .gap-20px {
   gap: 10px;
+}
+.text-center {
+  text-align: center;
+}
+.img-holder {
+  width: 100px;
+  height: 100px;
+}
+.img-holder img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 table {
   width: 100%;
@@ -37,8 +56,14 @@ th {
   text-align: left;
   min-width: 50px;
   padding: 10px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .border-bottom {
   border-bottom: 1px solid rgb(207, 207, 207) !important;
+}
+.sign-div {
+  width: 250px;
+  height: 100px;
+  border-bottom: 1px solid rgb(207, 207, 207) !important;
+  margin: 10px 0;
 }
