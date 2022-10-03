@@ -1,14 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  /*  const params = new URLSearchParams(window.location.search);
-
-  const name = params.get('name');
-  params.has("name"); 
- */
   const app = document.querySelector('#app');
 
-  let today = new Date();
-  let currentMonth = today.getMonth();
-  let currentYear = today.getFullYear();
   const days = [
     'Sunday',
     'Monday',
@@ -91,8 +83,18 @@ document.addEventListener('DOMContentLoaded', () => {
     app?.appendChild(signingDiv);
   };
 
-  // today.setMonth(8);
-  // console.log(months[today.getMonth()]);
-  createMonthCalendar(currentYear, currentMonth);
-  // createMonthCalendar(currentYear, today.getMonth());
+  // query params on route
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.has('date')) {
+    const paramsdate = params.get('date');
+    // @ts-ignore
+    let date = new Date(paramsdate);
+    let currentMonth = date.getMonth();
+    let currentYear = date.getFullYear();
+    createMonthCalendar(currentYear, currentMonth);
+  } else {
+    alert('looks like you route wrongly');
+    window.location.replace('index.html');
+  }
 });
