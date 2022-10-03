@@ -14,6 +14,17 @@ header, .signature-section {
   flex-direction: column;
   align-items: center;
 }
+.w-screen {
+  width: 100hv;
+  height: 100vh;
+}
+.h-screen {
+  height: 100vh;
+}
+.center-child {
+  display: grid;
+  place-items: center;
+}
 .my-5px {
   margin: 5px 0;
 }
